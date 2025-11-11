@@ -38,20 +38,33 @@ export const projects: Project[] = [
   {
     id: "ibex-co",
     title: "ibex.co",
-    description: "Web Development project for ibex.co.",
+    description: "A modern website for ibex (Leading BPO Company of Pakistan).",
     fullDescription: "A web development project for ibex.co.",
     image: ibexOg,
-    tags: ["Web Development"],
+    tags: ["Web Development", "React.js", "Javascript"],
     liveLink: "https://www.ibex.co/",
     githubLink: "",
     category: "Web Development",
-    year: "",
-    client: "",
-    role: "",
-    challenges: [],
-    solutions: [],
-    results: [],
-    technologies: { frontend: [], backend: [], tools: [] }
+    year: "2020",
+    client: "ibex (Leading BPO Company of Pakistan)",
+    role: "Front-end Engineer",
+    challenges: [
+      "Redesigning and developing a high-traffic corporate website to enhance user experience and performance.",
+      "Integrating modern web technologies while ensuring compatibility with existing backend systems."
+    ],
+    solutions: [
+      "Implemented a responsive design using React.js and styled-components to ensure optimal viewing across devices.",
+      "Collaborated with backend developers to seamlessly integrate the new frontend with the existing PHP/Laravel backend."
+    ],
+    results: [
+      "More than 32k daily visitors worldwide.",
+      "Modernized the website with a new tech stack, improving performance and user experience."
+    ],
+    technologies: {
+      frontend: ["React.js", "styled-components", "Javascript", "marketo-forms"],
+      backend: ["PHP", 'Laravel'],
+      tools: ["Git", "AWS"]
+    }
   },
   {
     id: "vozzi-go",
