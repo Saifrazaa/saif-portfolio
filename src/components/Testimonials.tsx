@@ -3,24 +3,24 @@ import { Star, Quote } from "lucide-react";
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Sarah Mitchell",
-      role: "CEO, TechStart Inc",
-      company: "United States",
-      text: "Outstanding work on our React Native app. The attention to detail and commitment to quality exceeded our expectations. Delivered on time and within budget.",
+      name: "George L",
+      role: "Head - Product & Growth at LORRYZ",
+      company: "UAE",
+      text: "We contacted Saif R. to develop our company website and Saif has done a wonderful job and delivered before time. Saif is a professional and hard-working person and I will contact him again for any future work. Highly recommend!!",
       rating: 5
     },
     {
       name: "David Chen",
       role: "E-Commerce Director",
       company: "Fashion Retail Co",
-      text: "Their Shopify expertise transformed our online store. Sales increased by 40% after the redesign. Highly recommend for any e-commerce project.",
+      text: "I highly recommend Saif, an exceptional Front-end Engineer specializing in React.js, Vue.js, React Native, and JavaScript. His expertise in transforming UX into intuitive UI and his passion for web development make him a standout professional. Saif’s innovative thinking and collaborative spirit significantly enhance any team he joins",
       rating: 5
     },
     {
       name: "Emma Rodriguez",
       role: "Product Manager",
       company: "FinTech Solutions",
-      text: "Exceptional developer who understands both the technical and business side. Built a complex dashboard that our team loves using every day.",
+      text: "I've worked with Saif on several projects related to web and mobile development. We shared insights over frontend development while working together. As my senior Saif has helped me on multiple occasions whenever I came to him with a problem. I find him really polite and humble person to work with. I would recommend him for the role of frontend developer. He knows his job.",
       rating: 5
     }
   ];
