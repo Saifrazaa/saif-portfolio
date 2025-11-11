@@ -12,10 +12,22 @@ const Contact = () => {
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    toast.success("Message sent! I'll get back to you soon.");
-    setFormData({ name: "", email: "", message: "" });
+
+    const myForm = e.currentTarget;
+    const formData = new FormData(myForm);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData as any).toString()
+    })
+      .then(() => {
+        toast.success("Message sent! I'll get back to you soon.");
+        setFormData({ name: "", email: "", message: "" });
+      })
+      .catch(error => alert(error));
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -50,7 +62,7 @@ const Contact = () => {
               <p className="text-muted-foreground mb-4">
                 For general inquiries and project discussions
               </p>
-              <a 
+              <a
                 href="mailto:razasaif171@gmail.com"
                 className="text-accent hover:underline font-medium"
               >
@@ -75,7 +87,8 @@ const Contact = () => {
           </div>
 
           <div className="bg-card rounded-xl p-8 shadow-lg border border-border animate-scale-in">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6" data-netlify="true">
+              <input type="hidden" name="form-name" value="contact-form" />
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-card-foreground mb-2">
                   Name
