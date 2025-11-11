@@ -12,12 +12,28 @@ const Contact = () => {
     message: ""
   });
 
-  // Let Netlify handle the form submission natively
+  const encode = (data: { [key: string]: string }) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  };
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    // Let the browser submit the form, but show toast after redirect
-    // (Netlify will redirect to ?success or a thank-you page)
-    // Optionally, you can use a hidden iframe to prevent redirect
-    // For now, do nothing here
+    e.preventDefault();
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact-form", ...formData }),
+    })
+      .then(() => {
+        toast.success("Message sent! I'll get back to you soon.");
+        setFormData({ name: "", email: "", message: "" });
+      })
+      .catch(error => {
+        toast.error("Something went wrong. Please try again.");
+        console.error(error);
+      });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -83,13 +99,7 @@ const Contact = () => {
               data-netlify="true"
               netlify-honeypot="bot-field"
               className="space-y-6"
-              onSubmit={() => {
-                // Show toast after Netlify redirect (if using a thank-you page, this won't run)
-                setTimeout(() => {
-                  toast.success("Message sent! I'll get back to you soon.");
-                  setFormData({ name: "", email: "", message: "" });
-                }, 100);
-              }}
+              onSubmit={handleSubmit}
             >
               {/* Netlify form hidden fields */}
               <input type="hidden" name="form-name" value="contact-form" />
