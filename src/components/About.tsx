@@ -4,8 +4,8 @@ const About = () => {
   const highlights = [
     {
       icon: Code2,
-      title: "Full-Stack Expertise",
-      description: "Proficient in both frontend and backend technologies, creating end-to-end solutions."
+      title: "Front-End Expertise",
+      description: "Proficient in frontend and mobile application technologies, creating end-to-end solutions."
     },
     {
       icon: Rocket,

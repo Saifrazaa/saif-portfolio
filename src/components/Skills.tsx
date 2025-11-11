@@ -31,6 +31,11 @@ const Skills = () => {
       category: "Database",
       icon: Database,
       skills: ["PostgreSQL", "MongoDB", "Redis", "Firebase", "Supabase"]
+    },
+    {
+      category: "AI Automation",
+      icon: Database,
+      skills: ["n8n", "MCP Servers", "Vapi", "Twilio"]
     }
   ];
 

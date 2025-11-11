@@ -30,19 +30,13 @@ const ProjectDetail = () => {
       <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <Link to="/#projects">
+            <Link to="/projects">
               <Button variant="ghost" size="sm">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Projects
               </Button>
             </Link>
             <div className="flex gap-3">
-              <Button variant="outline" size="sm" asChild>
-                <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                  <Github className="mr-2 h-4 w-4" />
-                  Code
-                </a>
-              </Button>
               <Button variant="hero" size="sm" asChild>
                 <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
                   <ExternalLink className="mr-2 h-4 w-4" />
@@ -267,7 +261,7 @@ const ProjectDetail = () => {
                   Get In Touch
                 </Button>
               </Link>
-              <Link to="/#projects">
+              <Link to="/projects">
                 <Button variant="outline" size="lg">
                   View More Projects
                 </Button>
