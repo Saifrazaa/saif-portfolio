@@ -87,8 +87,16 @@ const Contact = () => {
           </div>
 
           <div className="bg-card rounded-xl p-8 shadow-lg border border-border animate-scale-in">
-            <form onSubmit={handleSubmit} className="space-y-6" data-netlify="true">
+            <form 
+              name="contact-form"
+              onSubmit={handleSubmit}
+              className="space-y-6"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+            >
+              {/* Netlify form hidden fields */}
               <input type="hidden" name="form-name" value="contact-form" />
+              <input type="hidden" name="bot-field" />
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-card-foreground mb-2">
                   Name
