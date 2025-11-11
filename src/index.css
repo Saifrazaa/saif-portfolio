@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+     --background: 220 25% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 220 25% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 25% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 0 0% 95%;
+    --primary-foreground: 220 60% 15%;
+
+    --secondary: 220 20% 18%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 220 20% 18%;
+    --muted-foreground: 220 10% 65%;
+
+    --accent: 190 85% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 190 85% 50%;
+
+    --radius: 0.75rem;
+
+    --hero-gradient-start: 220 25% 8%;
+    --hero-gradient-end: 220 25% 15%;
+    
+    --accent-glow: 190 85% 50%;
+    
+    --shadow-soft: 220 25% 5%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
