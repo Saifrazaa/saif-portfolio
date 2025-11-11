@@ -19,8 +19,8 @@ const Projects = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {projects.map((project, index) => (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            {projects.slice(0, 4).map((project, index) => (
               <div
                 key={index}
                 className="group bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-border animate-slide-up"
@@ -79,6 +79,19 @@ const Projects = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="text-center">
+            <Button 
+              variant="hero" 
+              size="lg"
+              asChild
+            >
+              <Link to="/projects">
+                View All Projects
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
           </div>
         </div>
       </div>
