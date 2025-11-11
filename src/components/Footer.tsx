@@ -72,7 +72,7 @@ const Footer = () => {
 
           <div className="border-t border-border pt-8">
             <p className="text-center text-muted-foreground flex items-center justify-center gap-2">
-              © {currentYear} All rights reserved. Built with <Heart className="h-4 w-4 text-accent fill-accent" /> and modern web technologies.
+              © {currentYear} All rights reserved.
             </p>
           </div>
         </div>
